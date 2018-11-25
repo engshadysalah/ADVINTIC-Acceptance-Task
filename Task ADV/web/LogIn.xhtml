@@ -1,0 +1,136 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Log In</title>
+        <!-- custom-theme -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+            <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+            <meta name="keywords" content="Esteem Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+                  Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+            <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+                function hideURLbar(){ window.scrollTo(0,1); } </script>
+            <!-- //custom-theme -->
+            <link href="assests/LogIn/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+            <link href="assests/LogIn/css/snow.css" rel="stylesheet" type="text/css" media="all" />
+            <link href="assests/LogIn/css/component.css" rel="stylesheet" type="text/css" media="all" />
+            <link href="assests/LogIn/css/style_grid.css" rel="stylesheet" type="text/css" media="all" />
+            <link href="assests/LogIn/css/style.css" rel="stylesheet" type="text/css" media="all" />
+            <!-- font-awesome-icons -->
+            <link href="assests/LogIn/css/font-awesome.css" rel="stylesheet"/> 
+            <!-- //font-awesome-icons -->
+            <link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800" rel="stylesheet"/>
+        </meta>
+    </h:head>
+    <h:body>
+
+
+        <f:view>
+            <h:form>
+
+
+                <!-- /pages_agile_info_w3l -->
+
+                <div class="pages_agile_info_w3l">
+                    <!-- /login -->
+                    <div class="over_lay_agile_pages_w3ls">
+                        <div class="registration">
+
+                            <div class="signin-form profile">
+                                <h2>Sign in Form</h2>
+                                <div class="login-form">
+
+                                    <h:outputText value="Username   "/> 
+                                    <h:inputText value="#{Registertion.userName}" required="true" />
+
+                                    <h:outputText value="Password   "/>  
+                                    <h:inputSecret value="#{Registertion.password}" required="true"/>
+
+                                </div>   
+
+
+                                <div class="tp">
+                                    <h:commandButton value="LogIn" action="#{Registertion.returnInformation()}"/>
+                                </div>
+
+
+
+
+                                <div class="login-social-grids">
+                                    <ul>
+                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-rss"></i></a></li>
+                                    </ul>
+                                </div>
+
+                                <h6><a href="Activation.xhtml">Go Back</a></h6>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- /login -->
+                <!-- //pages_agile_info_w3l -->
+
+
+                <!-- js -->
+
+                <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+                <script src="js/modernizr.custom.js"></script>
+
+                <script src="js/classie.js"></script>
+                <script src="js/gnmenu.js"></script>
+                <script>
+new gnMenu(document.getElementById('gn-menu'));
+                </script>
+
+                <!-- //js -->
+
+                <script src="js/screenfull.js"></script>
+                <script>
+$(function () {
+    $('#supported').text('Supported/allowed: ' + !!screenfull.enabled);
+
+    if (!screenfull.enabled) {
+        return false;
+    }
+
+
+
+    $('#toggle').click(function () {
+        screenfull.toggle($('#container')[0]);
+    });
+});
+                </script>
+                <script src="js/jquery.nicescroll.js"></script>
+                <script src="js/scripts.js"></script>
+                <script src="js/snow.js"></script>
+                <script type="text/javascript">
+
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-36251023-1']);
+_gaq.push(['_setDomainName', 'jqueryscript.net']);
+_gaq.push(['_trackPageview']);
+
+(function () {
+    var ga = document.createElement('script');
+    ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(ga, s);
+})();
+
+                </script>
+                <script type="text/javascript" src="js/bootstrap-3.1.1.min.js"></script>
+
+
+
+            </h:form>
+        </f:view>
+
+    </h:body>
+</html>
+

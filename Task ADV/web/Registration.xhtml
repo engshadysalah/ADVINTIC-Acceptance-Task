@@ -1,0 +1,159 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html  
+     
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+        <title>Registration</title>
+
+        <link rel="stylesheet" href="assests/SinUp/css/singup_s.css" />`
+        
+        <!--upload img -->
+        <link rel="stylesheet" type="text/css" href="assests/SinUp/css/style_uplodIgm.css" />
+
+    </h:head>
+    <h:body>
+
+
+        <f:view>
+            <h:form  enctype="multipart/form-data">
+ <p:growl id="msgs" showDetail="true" />
+                <div class="cont">
+                    <!--            START NAV BAR          -->
+
+                    <br/>
+                    <div class="nav">
+                        <br/>
+                        <h1>Welcome To Registration </h1> <br/>
+                        <p><b>Dear.You Must Sign Up ,</b> </p>
+                        <br/>
+                        <p>
+                        <b>You Have To Insert This Information because It Is very Important For Security.</b>
+                        </p>
+                    </div>
+                 
+                    
+                    <div class="contt">
+                        <h:outputText value="First Name  : "/> 
+                        <h:inputText id="fn" value="#{Registertion.firstName}" required="true"   class="input input1"/>
+                         <h:message for="fn"  showDetail="true" />
+
+                    </div>
+                
+                    
+                    <div class="contt">
+                        <h:outputText value="Last Name  : "/> 
+                        <h:inputText id="ln" value="#{Registertion.lastName}" required="true"  class="input input2" />
+                         <h:message for="ln" showDetail="true" />
+
+
+                    </div>
+                  
+                    <div class="contt">
+                     
+                        
+                        
+        <p:outputLabel for="datetime" value="Date of Birth  : " />
+            <p:calendar id="datetime" value="#{Registertion.date}" pattern="MM/dd/yyyy HH:mm:ss" required="true"  class="input input3" >
+            <p:ajax event="dateSelect" listener="#{Registertion.onDateSelect}" update="msgs" />
+        </p:calendar>
+                       <h:message for="date" showDetail="true" />
+
+                    </div>
+               
+                    
+                    <div class="contt">
+
+                        <h:outputText value="Country  : "/>    
+
+                        <h:selectOneListbox id="countery" size="1"  value="#{Registertion.countery}" required="true"  class="input input3">
+                            <f:selectItem itemLabel="Egypt" itemValue="Egypt"/>
+                            <f:selectItem itemLabel="Syria" itemValue="Syria"/>
+                            <f:selectItem itemLabel="Sudan" itemValue="Sudan"/>
+                            <f:selectItem itemLabel="Jaban" itemValue="Jaban"/>
+                            <f:selectItem itemLabel="China" itemValue="China"/>
+                            <f:selectItem itemLabel="Germany" itemValue="Germany"/>
+                        </h:selectOneListbox><br/>
+                         <h:message for="countery" showDetail="true" />
+
+                    </div>
+                   
+                    
+                    <div class="contt">
+                        <h:outputText value="E-mail   : "/>  
+
+                        <h:inputText id="email" value="#{Registertion.email}" required="true" class="input input3"  >
+                            <f:validator validatorId="EmailValidator"/>
+                        </h:inputText>
+                        
+                        <h:message for="email" showDetail="true" />
+                    </div>
+                  
+                  
+                   
+                    
+                    <div class="contt">
+                        <h:outputText value="Username  : "/>  
+                        <h:inputText id="uname" value="#{Registertion.userName}" required="true" class="input input7" />
+                        <h:message for="uname" showDetail="true" />
+
+                    </div>
+                 
+                    
+                    <div class="contt">
+                        <h:outputText value="Password  : "/>  
+                        <h:inputSecret id="pass" value="#{Registertion.password}" required="true"  redisplay="true" class="input input8"/>
+                        <h:message for="pass" showDetail="true" />
+
+                    </div>
+              
+                    
+                    <div class="contt">
+                        <h:outputText value="verify password   : "/>  
+                        <h:inputSecret id="vpass" value="#{Registertion.verifyPassword}" redisplay="true" required="true" class="input input9"/>
+                        <h:message for="vpass" showDetail="true" />
+
+                        <div class="contt">
+
+                          <div  id="upload-button">
+                                               
+                              <h:inputFile id="photo" value="#{Registertion.personalPhoto}" required="true"  >
+ 
+                         </h:inputFile>
+                         
+                        <h:message for="photo" showDetail="true" />
+                          </div>
+                    </div>
+                        
+                    </div>
+                    <!--            ENd NAV BAR         -->
+
+<br/><br/>
+
+
+  
+                    
+
+                    <div id="conts"> 
+
+                        <h:commandButton id="conts1"  value="Registeration" action="#{Registertion.savedInformmation()}"  class="input input10"/>
+
+                    </div>
+
+
+                </div> 
+
+            </h:form>
+        </f:view>
+
+
+
+    </h:body>
+</html>
+

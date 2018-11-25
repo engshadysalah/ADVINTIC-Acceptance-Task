@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+
+        <link href="assests/ShowData/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+        <link rel="stylesheet" type="text/css" href="assests/ShowData/css/table-style.css" />
+        <link href="assests/ShowData/css/style.css" rel="stylesheet" type="text/css" media="all" />
+
+    </h:head>
+    <h:body>
+
+        <f:view>
+            <h:form>
+           
+                <!-- banner -->
+                <div class="wthree_agile_admin_info">
+
+
+                    <!-- /inner_content-->
+                    <div class="inner_content">
+                        <!-- /inner_content_w3_agile_info-->
+
+                        <!-- /social_media-->
+                        <div class="social_media_w3ls">
+
+
+                         
+                                
+                        
+                                <img src="http://localhost:8080/Task_ADV/image.png?img=#{Registertion.personalPhotoPATH}"  height="400" width="400" style="border: 3px solid # DDD;" />
+                    
+                            
+                            
+                            
+                        </div>
+                        <div class="clearfix"></div>
+
+                        <div class="inner_content_w3_agile_info two_in">
+                            <h2 >Welcome  <h:outputText value="#{Registertion.firstName} "/>  <h:outputText value="#{Registertion.lastName}"/>   </h2>
+                           
+                            <br/><br/>
+                            
+                            <!-- tables -->
+
+                            <div class="agile-tables">
+                                <div class="w3l-table-info agile_info_shadow">
+                                    <h3 class="w3_inner_tittle two">Your Information</h3>
+                                    <table id="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Birth date </th>
+                                                <th>Country</th>
+                                                <th>Email</th>
+                                                <th>Username</th>
+                                                <th>Password </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td> <h:outputText value="#{Registertion.date} "/>  </td>
+                                                <td><h:outputText value="#{Registertion.countery} "/> </td>
+                                                <td><h:outputText value="#{Registertion.email} "/> </td>
+                                                <td><h:outputText value="#{Registertion.userName} "/> </td>
+                                                <td><h:outputText value="#{Registertion.password} "/> </td>
+                                            </tr>
+                                           
+                                        </tbody>
+                                    </table>
+
+                                    <code class="js">
+                                        
+                                    </code>
+                                </div>
+
+
+
+                            </div>
+                            <!-- //inner_content_w3_agile_info-->
+                        </div>
+
+                    </div>
+                    <!-- //inner_content-->
+
+                    <!-- tables -->
+
+                </div>
+            </h:form>
+
+
+        </f:view>
+
+
+    </h:body>
+</html>
+

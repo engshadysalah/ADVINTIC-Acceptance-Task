@@ -1,0 +1,35 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jul 15, 2017, 9:08:55 PM
+    Author     : Pop Shady
+*/
+
+
+            #upload-button{
+                
+                border: 1px solid #DDD;
+                width: 50px;
+                height: 50px;
+                margin: 20px auto;
+                background: url('../images/uploadImag.png');
+                background-repeat: no-repeat;
+                background-size: 100% 100% ;
+                
+            }
+           
+            
+            #upload-button input[type='file']{
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+            }
+            
+            #upload-button :active{
+                width: 102px;
+                height: 102px;
+                
+            }

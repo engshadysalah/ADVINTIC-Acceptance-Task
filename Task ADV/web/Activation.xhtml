@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Activation Code Page</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+        <link href="assests/ActivationCode/css/style.css" rel="stylesheet" type="text/css" media="all" />
+    </h:head>
+    <h:body>
+
+        <f:view>
+            <h:form>
+
+                <div class="wrap">
+                    <div class="content">
+                        <div class="logo">
+                            <span><img src="assests/ActivationCode/images/signal.png"/>Check Your Mail to get Your activation Code :)</span>
+
+                        </div>
+                        <div class="buttom">
+                            <div class="seach_bar">
+                                <p><span>Enter Your Activation Code Please  !</span> </p>
+                                <div class="search_box">
+
+                                    <h:inputText  id="fnn" value="#{Registertion.activation_Code}"  onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}" required="true" />
+                                       
+                                </div>
+
+                            </div>
+                              <br/>
+                            <h:commandButton id="conts1"  value="N e x t" action="#{Registertion.checkActivationCode()}"  />
+
+                        </div>
+                    </div>
+                </div>
+
+            </h:form>
+        </f:view>  
+
+    </h:body>
+</html>
+

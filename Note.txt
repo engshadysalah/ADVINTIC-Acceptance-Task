@@ -1,0 +1,12 @@
+
+
+All process except :
+
+
+ 
+2: java mail api
+
+without Maven
+
+
+Mark : it is uploaded to BirBucket
